@@ -1,0 +1,51 @@
+#IDE
+**/.idea
+**/.vscode
+**/.ac-php-conf.json
+**/.tmp
+
+# System Files
+**/.DS_Store
+**/Thumbs.db
+
+#all node modules
+**/node_modules/
+
+#all dist
+**/dist/
+
+
+
+## START angular-complete-guide ##
+# compiled output
+courses/angular-complete-guide/tmp
+courses/angular-complete-guide/out-tsc
+# Only exists if Bazel was run
+courses/angular-complete-guide/bazel-out
+# profiling files
+courses/angular-complete-guide/chrome-profiler-events*.json
+courses/angular-complete-guide/speed-measure-plugin*.json
+speed-measure-plugin*.json
+chrome-profiler-events*.json
+# misc
+courses/angular-complete-guide/.sass-cache
+courses/angular-complete-guide/connect.lock
+courses/angular-complete-guide/coverage
+courses/angular-complete-guide/libpeerconnection.log
+courses/angular-complete-guide/npm-debug.log
+npm-debug.log
+courses/angular-complete-guide/yarn-error.log
+yarn-error.log
+courses/angular-complete-guide/testem.log
+testem.log
+courses/angular-complete-guide/typings
+## AND angular-complete-guide ##
+
+
+## START Found Discount ##
+#telegramBots/foundDiscount/.env
+## AND Found Discount ##
+
+
+## temp files ##
+/temp/
