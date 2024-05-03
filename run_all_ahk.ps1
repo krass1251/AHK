@@ -1,4 +1,4 @@
-$basePath = "C:\krass\personal\krass-lib\AutoHotkey"
+$basePath = "C:\krass\personal\AHK"
 $exeFiles = Get-ChildItem -Path $basePath -File -Filter "*.exe"
 
 foreach ($exeFile in $exeFiles) {

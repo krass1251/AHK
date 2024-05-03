@@ -166,6 +166,9 @@ return
 ::ipcd :: improve the code using JavaScript best practices. I want you to act as a Senior JavaScript developer.
 ::шзсв :: improve the code using JavaScript best practices. I want you to act as a Senior JavaScript developer.
 
+::ipnm :: improve the variables naming using JavaScript best practices. I want you to act as a Senior JavaScript developer.
+::шзть :: improve the variables naming using JavaScript best practices. I want you to act as a Senior JavaScript developer.
+
 ::ipcdts :: improve the code using TypeScript best practices. I want you to act as a Senior TypeScript developer.
 ::шзсвеы :: improve the code using TypeScript best practices. I want you to act as a Senior TypeScript developer.
 
