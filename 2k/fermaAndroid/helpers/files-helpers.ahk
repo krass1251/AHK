@@ -1,17 +1,23 @@
 LoadJsonFromFile(filePath) {
+    if !FileExist(filePath)
+    {
+        MsgBox, File not found: %filePath%
+        return
+    }
+
     ; Чтение файла
     FileRead, jsonString, %filePath%
     if ErrorLevel ; Проверка на наличие ошибок при чтении файла
     {
-        MsgBox, Не удалось прочитать файл: %filePath%
+        MsgBox, Can't read the file: %filePath%
         return
     }
 
     ; Загрузка JSON из строки
-    jsonObject := JsonLoad(jsonString)
+    jsonObject := JSON.Load(jsonString)
     if (jsonObject = "") ; Проверка на наличие ошибок при загрузке JSON
     {
-        MsgBox, Не удалось загрузить JSON из строки
+        MsgBox, cant reade the JSON sting from the file: %filePath%
         return
     }
 

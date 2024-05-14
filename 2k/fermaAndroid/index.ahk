@@ -1,4 +1,5 @@
 #Include ..\..\Libs\Lib\getImageSize.ahk
+#Include ..\..\Libs\json\JSON.ahk
 #Include helpers\clipboard-helper.ahk
 #Include helpers\click-helpers.ahk
 #Include helpers\logger-helpers.ahk
