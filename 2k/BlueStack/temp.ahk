@@ -14,5 +14,5 @@
 
 #Include projects\hamster.ahk
 
-
-openTelegram()
+Sleep, 1500
+ClickToEny(["Android_clearAll"])

@@ -262,3 +262,59 @@ start emulator: 2 gabriela925.tg
 ----------------------------------------
 16.05.2024 17:12:17
 start emulator: 3 howard725.tg
+
+16.05.2024 19:08:39
+START in func: ClickToEny
+looking for images: Android_clearAll     
+
+16.05.2024 19:08:53
+ERROR in func: ClickToEny
+can't find images: Android_clearAll     
+
+16.05.2024 19:09:58
+START in func: ClickToEny
+looking for images: Android_clearAll     
+
+16.05.2024 19:10:13
+ERROR in func: ClickToEny
+can't find images: Android_clearAll     
+
+16.05.2024 19:11:28
+START in func: ClickToEny
+looking for images: Android_clearAll     
+
+16.05.2024 19:11:45
+ERROR in func: ClickToEny
+can't find images: Android_clearAll     
+
+16.05.2024 19:13:01
+START in func: ClickToEny
+looking for images: Android_clearAll     
+
+16.05.2024 19:13:11
+START in func: ClickToEny
+looking for images: Android_clearAll     
+
+16.05.2024 19:14:09
+START in func: ClickToEny
+looking for images: Android_clearAll     
+
+16.05.2024 19:14:23
+ERROR in func: ClickToEny
+can't find images: Android_clearAll     
+
+16.05.2024 19:15:19
+START in func: ClickToEny
+looking for images: Android_clearAll     
+
+16.05.2024 19:15:38
+ERROR in func: ClickToEny
+can't find images: Android_clearAll     
+
+16.05.2024 19:18:19
+START in func: ClickToEny
+looking for images: Android_clearAll     
+
+16.05.2024 19:18:37
+ERROR in func: ClickToEny
+can't find images: Android_clearAll     
