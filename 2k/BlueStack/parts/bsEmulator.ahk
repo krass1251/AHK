@@ -33,6 +33,9 @@ androidResetApps() {
 openTelegram(){
     androidResetApps()
     ClickToEny(["telegramLogo2", "telegramLogo", "telegramLogo3", "telegramLogo4"])
-    ClickToEny(["telegram_contact-cancel"], { maxWaitTimeSec: 5 })
+    if (ClickToEny(["telegram_contact-ok"], { maxWaitTimeSec: 5 })) {
+        ClickToEny(["android-allow"], { maxWaitTimeSec: 5 })
+        ClickToEny(["android-allow"], { maxWaitTimeSec: 5 })
+    }
     ClickToEny(["telegram-update-latter"], { maxWaitTimeSec: 5 })
 }

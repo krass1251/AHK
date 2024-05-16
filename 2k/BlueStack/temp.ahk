@@ -15,4 +15,4 @@
 #Include projects\hamster.ahk
 
 
-hamster()
+openTelegram()
