@@ -22,3 +22,79 @@ looking for images: prx_postern
 16.05.2024 14:31:44
 Ok in func: ClickToEny
 find images: prx_postern     
+
+16.05.2024 15:28:18
+START in func: ClickToEny
+looking for images: bs_Search1     
+
+16.05.2024 15:28:23
+ERROR in func: ClickToEny
+can't find images: bs_Search1     
+
+16.05.2024 15:29:36
+START in func: ClickToEny
+looking for images: bs_Search1     
+
+16.05.2024 15:29:43
+ERROR in func: ClickToEny
+can't find images: bs_Search1     
+
+16.05.2024 15:30:10
+START in func: ClickToEny
+looking for images: bs_Search3     
+
+16.05.2024 15:30:14
+Ok in func: ClickToEny
+find images: bs_Search3     
+
+16.05.2024 15:30:35
+START in func: ClickToEny
+looking for images: bs_Search3     
+
+16.05.2024 15:30:42
+ERROR in func: ClickToEny
+can't find images: bs_Search3     
+
+16.05.2024 15:31:16
+START in func: ClickToEny
+looking for images: bs_Search3     
+
+16.05.2024 15:31:26
+Ok in func: ClickToEny
+find images: bs_Search3     
+
+16.05.2024 15:44:32
+START in func: ClickToEny
+looking for images: clickAsist_saved-configs     
+
+16.05.2024 15:44:42
+ERROR in func: ClickToEny
+can't find images: clickAsist_saved-configs     
+
+16.05.2024 15:44:45
+START in func: ClickToEny
+looking for images: clickAsist_saved-configs     
+
+16.05.2024 15:44:55
+ERROR in func: ClickToEny
+can't find images: clickAsist_saved-configs     
+
+16.05.2024 15:46:35
+START in func: ClickToEny
+looking for images: clickAsist_saved-configs     
+
+16.05.2024 15:46:43
+START in func: ClickToEny
+looking for images: clickAsist_saved-configs     
+
+16.05.2024 15:46:54
+ERROR in func: ClickToEny
+can't find images: clickAsist_saved-configs     
+
+16.05.2024 15:53:54
+START in func: ClickToEny
+looking for images: clickAsist_saved-configs     
+
+16.05.2024 15:54:04
+ERROR in func: ClickToEny
+can't find images: clickAsist_saved-configs     

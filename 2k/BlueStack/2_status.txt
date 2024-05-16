@@ -1,4 +1,4 @@
 
-16.05.2024 14:31:44
-Ok in func: ClickToEny
-find images: prx_postern     
+16.05.2024 15:54:04
+ERROR in func: ClickToEny
+can't find images: clickAsist_saved-configs     

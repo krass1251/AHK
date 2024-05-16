@@ -20,12 +20,12 @@ Loop  ; Начало бесконечного цикла
             WaithForEny(["prx_postern", "clickAsist", "telegramLogo2", "telegramLogo"])
 
             ; Run Proxy
-            ClickToEny(["prx_postern"])
+            ClickToEny(["prx_postern"], { sleepAfter: 1000 })
             ClickToEny(["Android_homeBtn"])
             WaithForEny(["prx_active1", "prx_active2"])
 ;
 ;            ; Run and Setup Click Assistant
-            ClickToEny(["clickAsist"])
+            ClickToEny(["clickAsist"], { sleepAfter: 500 })
 ;            ClickToEny(["clickAsist_rating-not"], 3)
             ClickToEny(["clickAsist_close"])
             ClickToEny(["clickAsist_StartService"])
@@ -39,14 +39,19 @@ Loop  ; Начало бесконечного цикла
             ClickToEny(["Android_resentApp"])
             ClickToEny(["Android_clearAll"])
             ClickToEny(["telegramLogo2", "telegramLogo"])
-            ClickToEny(["telegram_contact-cancel"]) ; make it short
-            ClickToEny(["telegram-update-latter"])  ; make it short
+            ClickToEny(["telegram_contact-cancel"], { maxWaitTimeSec: 5 })
+            ClickToEny(["telegram-update-latter"], { maxWaitTimeSec: 5 })
             ClickToEny(["hamster_logo"])
             ClickToEny(["hamster_play"])
             ClickToEny(["hamster_thx"])
             ;Run colect items ?
 ;            ClickToEny(["clickAsist_play"])
 ;            Sleep, 30000
+
+
+
+
+
 
 
 ;            ; Make MemeFi Project

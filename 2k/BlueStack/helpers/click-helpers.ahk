@@ -2,9 +2,11 @@
 ClickToEny() Parameters:
 - imageNames (Array of Strings): Names of the images to search for. ["telegramLogo", "telegramLogo2"]
 - params (Object, Optional): Customization options:
-    - maxWaitTimeSec (Integer): Max wait time in seconds (default: 10).
-    - sleepTime (Integer): Time between searches in milliseconds (default: 200).
-    - clickPosition (Array of Two Integers): Click position within the image as fractions (default: { clickPosition: [0.5, 0.5]} ):
+    - maxWaitTimeSec (Integer): Max wait time in seconds (default: 10, { maxWaitTimeSec: 10 }).
+    - sleepTime (Integer): Time between searches in milliseconds (default: 200, { sleepTime: 200 } ).
+    - sleepBefore (Integer): Sleep before find image (default: 200, { sleepBefore: 200 } ).
+    - sleepAfter (Integer): Sleep after find image (default: 200, { sleepAfter: 200 } ).
+    - clickPosition (Array of Two Integers): Click position within the image as fractions (default: { clickPosition: [0.5, 0.5] } ):
         - Left Top: [0, 0]
         - Right Top: [1, 0]
         - Left Bottom: [0, 1]
@@ -18,6 +20,8 @@ ClickToEny(imageNames, params := false) {
     startTime := A_TickCount
 
     maxWaitTimeSec := params.maxWaitTimeSec ? params.maxWaitTimeSec : 10
+    sleepBefore := params.sleepBefore ? params.sleepBefore : 200
+    sleepAfter := params.sleepAfter ? params.sleepAfter : 200
     sleepTime := params.sleepTime ? params.sleepTime : 200
     clickPosition := params.clickPosition ? params.clickPosition : [0.5, 0.5]
 
@@ -25,6 +29,7 @@ ClickToEny(imageNames, params := false) {
         StartFindEny("ClickToEny", imageNames)
     }
 
+    Sleep, %sleepBefore%
     Loop
     {
         foundImage := false
@@ -53,7 +58,9 @@ ClickToEny(imageNames, params := false) {
         If (foundImage)
         {
             OkFindEny("ClickToEny", imageNames)
-            Sleep, 100
+
+            Sleep, %sleepAfter%
+
             Return true  ; Изображение найдено и кликнуто успешно
         }
 

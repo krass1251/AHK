@@ -9,4 +9,6 @@
 
 
 
-ClickToEny(["prx_postern"])
+
+
+            ClickToEny(["clickAsist_run-config-2"], { clickPosition: [0.95, 0.5]})
