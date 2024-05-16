@@ -2,7 +2,7 @@
 ClickToEny() Parameters:
 - imageNames (Array of Strings): Names of the images to search for. ["telegramLogo", "telegramLogo2"]
 - params (Object, Optional): Customization options:
-    - maxWaitTimeSec (Integer): Max wait time in seconds (default: 10, { maxWaitTimeSec: 10 }).
+    - maxWaitTimeSec (Integer): Max wait time in seconds (default: 10, { maxWaitTimeSec: 120 }).
     - sleepTime (Integer): Time between searches in milliseconds (default: 200, { sleepTime: 200 } ).
     - sleepBefore (Integer): Sleep before find image (default: 200, { sleepBefore: 200 } ).
     - sleepAfter (Integer): Sleep after find image (default: 200, { sleepAfter: 200 } ).
@@ -80,7 +80,7 @@ ClickToEny(imageNames, params := false) {
 WaithForEny(imageNames, params := false) {
     startTime := A_TickCount  ; Инициализируем startTime перед началом цикла
 
-    maxWaitTimeSec := params.maxWaitTimeSec ? params.maxWaitTimeSec : 30000
+    maxWaitTimeSec := params.maxWaitTimeSec ? params.maxWaitTimeSec : 30
     sleepTime := params.sleepTime ? params.sleepTime : 200
 
     if(IS_DEBUG_MODE) {

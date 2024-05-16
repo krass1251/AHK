@@ -9,3 +9,6 @@ FormatTime, StartScriptTime,, yyyy.MM.dd_HH.mm.ss
 
 Global IS_DEBUG_MODE := false
 Global IS_DEBUG_MODE := true
+
+
+Global STATE := { isClickAsist: false, isProxy: false }
