@@ -12,16 +12,20 @@ StartFindEny(funcName, imageNames) {
 ;    LogToTelegram(Message)
 }
 
-ErrorFindEny(funcName, imageNames) {
+ErrorFindEny(funcName, imageNames, params := false) {
+    additionalText := params.additionalText ? params.additionalText : ""
+
     FormatTime, currentTime,, dd.MM.yyyy HH:mm:ss
-    Message := currentTime . "`nERROR in func: " . funcName . "`ncan't find images: " . imageNames[1] . " " . imageNames[2] . " " . imageNames[3] . " " . imageNames[4] . " " . imageNames[5] . " " . imageNames[6]
+    Message := currentTime . "`nERROR in func: " . funcName . "`ncan't find images: " . imageNames[1] . " " . imageNames[2] . " " . imageNames[3] . " " . imageNames[4] . " " . imageNames[5] . " " . imageNames[6] . "`n" . additionalText
     LogToFile(Message)
 ;    LogToTelegram(Message)
 }
 
-OkFindEny(funcName, imageNames) {
+OkFindEny(funcName, imageNames, params := false) {
+    additionalText := params.additionalText ? params.additionalText : ""
+
     FormatTime, currentTime,, dd.MM.yyyy HH:mm:ss
-    Message := currentTime . "`nOk in func: " . funcName . "`nfind images: " . imageNames[1] . " " . imageNames[2] . " " . imageNames[3] . " " . imageNames[4] . " " . imageNames[5] . " " . imageNames[6]
+    Message := currentTime . "`nOk in func: " . funcName . "`nfind images: " . imageNames[1] . " " . imageNames[2] . " " . imageNames[3] . " " . imageNames[4] . " " . imageNames[5] . " " . imageNames[6] . "`n" . additionalText
     LogToFile(Message)
 ;    LogToTelegram(Message)
 }

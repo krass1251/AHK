@@ -1,4 +1,5 @@
 
-16.05.2024 19:18:37
+16.05.2024 19:34:05
 ERROR in func: ClickToEny
-can't find images: Android_clearAll     
+can't find images: imageNames     
+variation: 150

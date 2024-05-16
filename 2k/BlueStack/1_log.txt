@@ -318,3 +318,41 @@ looking for images: Android_clearAll
 16.05.2024 19:18:37
 ERROR in func: ClickToEny
 can't find images: Android_clearAll     
+
+16.05.2024 19:28:49
+START in func: ClickToEny
+looking for images: Android_clearAll     
+
+16.05.2024 19:29:05
+ERROR in func: ClickToEny
+can't find images: Android_clearAll     
+
+
+16.05.2024 19:30:45
+START in func: ClickToEny
+looking for images: Android_clearAll     
+
+16.05.2024 19:31:04
+ERROR in func: ClickToEny
+can't find images: Android_clearAll     
+variation
+
+16.05.2024 19:32:35
+ERROR in func: ClickToEny
+can't find images:      
+variation
+
+16.05.2024 19:33:07
+ERROR in func: ClickToEny
+can't find images: imageNames     
+variation
+
+16.05.2024 19:33:31
+ERROR in func: ClickToEny
+can't find images: imageNames     
+variation150
+
+16.05.2024 19:34:05
+ERROR in func: ClickToEny
+can't find images: imageNames     
+variation: 150

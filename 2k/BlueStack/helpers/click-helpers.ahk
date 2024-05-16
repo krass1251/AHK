@@ -3,7 +3,6 @@ ClickToEny() Parameters:
 - imageNames (Array of Strings): Names of the images to search for. ["telegramLogo", "telegramLogo2"]
 - params (Object, Optional): Customization options:
     - maxWaitTimeSec (Integer): Max wait time in seconds (default: 10, { maxWaitTimeSec: 120 }).
-    - sleepTime (Integer): Time between searches in milliseconds (default: 200, { sleepTime: 200 } ).
     - sleepBefore (Integer): Sleep before find image (default: 200, { sleepBefore: 200 } ).
     - sleepAfter (Integer): Sleep after find image (default: 200, { sleepAfter: 200 } ).
     - clickPosition (Array of Two Integers): Click position within the image as fractions (default: { clickPosition: [0.5, 0.5] } ):
@@ -22,7 +21,6 @@ ClickToEny(imageNames, params := false) {
     maxWaitTimeSec := params.maxWaitTimeSec ? params.maxWaitTimeSec : 15
     sleepBefore := params.sleepBefore ? params.sleepBefore : 200
     sleepAfter := params.sleepAfter ? params.sleepAfter : 200
-    sleepTime := params.sleepTime ? params.sleepTime : 10
     variation := params.variation ? params.variation : 0
     clickPosition := params.clickPosition ? params.clickPosition : [0.5, 0.5]
 
@@ -58,11 +56,8 @@ ClickToEny(imageNames, params := false) {
         ; Проверяем, было ли найдено хотя бы одно изображение
         If (foundImage)
         {
-            OkFindEny("ClickToEny", imageNames)
-
+            OkFindEny("ClickToEny", imageNames, { additionalText: "variation: " . variation })
             Sleep, %sleepAfter%
-            MsgBox, variation in the end %variation%
-
             Return true  ; Изображение найдено и кликнуто успешно
         }
 
@@ -71,17 +66,13 @@ ClickToEny(imageNames, params := false) {
 
         If ((currentTime - startTime) > (maxWaitTimeSec * 1000))
         {
-            ErrorFindEny("ClickToEny", imageNames)
-
-            MsgBox, variation in the end %variation%
+            ErrorFindEny("ClickToEny", imageNames, { additionalText: "variation: " . variation })
             Return false  ; Изображение не найдено в течение maxWaitTimeSec
         }
 
-        if(variation < 205) {
-            variation += 50
+        if(variation < 55) {
+            variation += 20
         }
-
-        Sleep, %sleepTime%
     }
 }
 
@@ -89,7 +80,6 @@ WaithForEny(imageNames, params := false) {
     startTime := A_TickCount  ; Инициализируем startTime перед началом цикла
 
     maxWaitTimeSec := params.maxWaitTimeSec ? params.maxWaitTimeSec : 30
-    sleepTime := params.sleepTime ? params.sleepTime : 10
 
     if(IS_DEBUG_MODE) {
         StartFindEny("WaithForEny", imageNames)
@@ -126,7 +116,5 @@ WaithForEny(imageNames, params := false) {
             ErrorFindEny("WaithForEny", imageNames)
             Return false  ; Изображение не найдено в течение maxWaitTimeSec
         }
-
-         Sleep, %sleepTime%
      }
  }

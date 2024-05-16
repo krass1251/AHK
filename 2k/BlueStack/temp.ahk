@@ -14,5 +14,6 @@
 
 #Include projects\hamster.ahk
 
-Sleep, 1500
-ClickToEny(["Android_clearAll"])
+variation := 150
+
+ErrorFindEny("ClickToEny", ["imageNames"], { additionalText: "variation: " . variation })
