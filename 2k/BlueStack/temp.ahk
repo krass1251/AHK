@@ -7,10 +7,4 @@
 #Include variables\variables.ahk
 
 
-
-if (emulators != "") ; Проверяем, что функция вернула не пустое значение
-{
-    ; Доступ к данным из объекта, например, имя пользователя
-    MsgBox % emulators["name"]
-}
-
+ClickToEny(["BsSearch1"])
