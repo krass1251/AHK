@@ -17,3 +17,8 @@ closeEmulator() {
     ClickToEny(["Android_close"])
     return ClickToEny(["Android_close-confirm"], { sleepAfter: 1500 })
 }
+
+androidResetApps() {
+    ClickToEny(["Android_resentApp"])
+    ClickToEny(["Android_clearAll"])
+}

@@ -1,7 +1,6 @@
 hamster() {
 ;    Hamster Project
-    ClickToEny(["Android_resentApp"])
-    ClickToEny(["Android_clearAll"])
+    androidResetApps()
     ClickToEny(["telegramLogo2", "telegramLogo"])
     ClickToEny(["telegram_contact-cancel"], { maxWaitTimeSec: 5 })
     ClickToEny(["telegram-update-latter"], { maxWaitTimeSec: 5 })
