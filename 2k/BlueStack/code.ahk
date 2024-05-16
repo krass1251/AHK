@@ -7,40 +7,50 @@ Loop  ; Начало бесконечного цикла
 
             ; Run Emulator
             emulatorName := emulatorNames[A_Index]  ; Получаем значение текущего элемента массива
+            WinClose, BlueStacks Multi Instance Manager
+            Sleep, 300
             Run, "C:\Program Files\BlueStacks_nxt\HD-MultiInstanceManager.exe"
 
-            ClickToEny(["BsSearch1", "BsSearch2", "BsSearch3"])
-;            SendRaw(emulatorName)
-;
-;            ; Close Previos Emulator if it Still Open
-;            ClickToEny(["closeEmulator"], 2)
-;            ClickToEny(["ok"], 2)
-;
-;            ClickToEny(["startEmulator"])
-;            WaithForEny(["soudnPlusBtn", "keyboardBtn"])
-;            ClickToEny(["closeAdvertisment"], 10)
-;            ClickToEny(["postern"])
-;            WaithForEny(["proxiActive1", "proxiActive2", "proxiActive3"])
-;            ClickToEny(["Android_homeBtn"])
+            ClickToEny(["bs_Search1", "bs_Search2"], { clickPosition: [-2, 0.5]})
+            Send, ^a
+            Send, {Backspace}
+            SendRaw(emulatorName)
+            ClickToEny(["BS_startEmulator"])
+            ClickToEny(["Android_max-view"])
+            WaithForEny(["prx_postern", "clickAsist", "telegramLogo2", "telegramLogo"])
+
+            ; Run Proxy
+            ClickToEny(["prx_postern"])
+            ClickToEny(["Android_homeBtn"])
+            WaithForEny(["prx_active1", "prx_active2"])
 ;
 ;            ; Run and Setup Click Assistant
-;            ClickToEny(["clickAsist"])
+            ClickToEny(["clickAsist"])
 ;            ClickToEny(["clickAsist_rating-not"], 3)
-;            ClickToEny(["clickAsist_close-battery-warning"])
-;            ClickToEny(["clickAsist_RunService"])
-;            ClickToEny(["clickAsist_cancelAD"])
-;            ClickToEny(["clickAsist_saved-configs" ,"clickAsist_saved-configs2"])
-;            ClickToEny(["clickAsist_search"])
-;            Sleep, 150
-;            SendRaw("help")
-;            Sleep, 150
-;            ClickToEny(["clickAsist_run-config"])
-;            Sleep, 400
-;            ClickToEny(["clickAsist_hide-targets"])
-;            ClickToEny(["Android_homeBtn"])
+            ClickToEny(["clickAsist_close"])
+            ClickToEny(["clickAsist_StartService"])
+            ClickToEny(["clickAsist_cancelAD"])
+            ClickToEny(["clickAsist_saved-configs"])
+            ClickToEny(["clickAsist_run-config-2"], { clickPosition: [0.95, 0.5]})
+            ClickToEny(["clickAsist_hide-targets"])
+            ClickToEny(["Android_homeBtn"])
 ;
+;            ; Hamster Project
+            ClickToEny(["Android_resentApp"])
+            ClickToEny(["Android_clearAll"])
+            ClickToEny(["telegramLogo2", "telegramLogo"])
+            ClickToEny(["telegram_contact-cancel"]) ; make it short
+            ClickToEny(["telegram-update-latter"])  ; make it short
+            ClickToEny(["hamster_logo"])
+            ClickToEny(["hamster_play"])
+            ClickToEny(["hamster_thx"])
+            ;Run colect items ?
+;            ClickToEny(["clickAsist_play"])
+;            Sleep, 30000
+
+
 ;            ; Make MemeFi Project
-;            ClickToEny(["telegramLogo", "telegramLogo2"])
+;            ClickToEny(["telegramLogo2", "telegramLogo"])
 ;            Sleep, 1000
 ;            ClickToEny(["telegram_memFI-logo", "telegram_memFI-logo2", "telegram_memFI-logo3", "telegram_memFI-logo-name4", "telegram_memFI-logo-name5"], 30)
 ;            ClickToEny(["telegram_Bot-menu"])
@@ -60,6 +70,10 @@ Loop  ; Начало бесконечного цикла
 ;            ClickToEny(["closePL", "closePL2", "closePL3"])
 ;            ClickToEny(["closeConfirm"])
 ;            Sleep, 1500
+
+            ClickToEny(["Android_close"])
+            ClickToEny(["Android_close-confirm"])
+
         }
         Sleep, 60 * 60000
     }

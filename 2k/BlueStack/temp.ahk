@@ -7,4 +7,6 @@
 #Include variables\variables.ahk
 
 
-ClickToEny(["BsSearch1"])
+
+
+ClickToEny(["prx_postern"])
