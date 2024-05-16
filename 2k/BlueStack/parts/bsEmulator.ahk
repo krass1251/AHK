@@ -3,6 +3,7 @@ runEmulator(emulatorName) {
     Sleep, 300
     Run, "C:\Program Files\BlueStacks_nxt\HD-MultiInstanceManager.exe"
 
+    ClickToEny(["BS_stopAll"], { maxWaitTimeSec: 5 })
     ClickToEny(["bs_Search1", "bs_Search2"], { clickPosition: [-2, 0.5]})
     Send, ^a
     Send, {Backspace}
