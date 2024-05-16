@@ -20,5 +20,19 @@ closeEmulator() {
 
 androidResetApps() {
     ClickToEny(["Android_resentApp"])
-    ClickToEny(["Android_clearAll"])
+
+    if (!ClickToEny(["Android_clearAll", "Android_clearAll2", "Android_clearAll3", "Android_clearAll4"])) {
+        CoordMode, Mouse, Screen
+        MouseMove, 1550, 120
+        Sleep, 200
+        Click, Left, 1
+        Sleep, 200
+    }
+}
+
+openTelegram(){
+    androidResetApps()
+    ClickToEny(["telegramLogo2", "telegramLogo", "telegramLogo3", "telegramLogo4"])
+    ClickToEny(["telegram_contact-cancel"], { maxWaitTimeSec: 5 })
+    ClickToEny(["telegram-update-latter"], { maxWaitTimeSec: 5 })
 }

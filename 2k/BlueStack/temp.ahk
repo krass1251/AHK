@@ -8,5 +8,11 @@
 
 #Include variables\variables.ahk
 
+#Include parts\bsEmulator.ahk
+#Include parts\proxy.ahk
+#Include parts\clickAsist.ahk
 
-            ClickToEny(["clickAsist_hide-targets"])
+#Include projects\hamster.ahk
+
+
+hamster()
