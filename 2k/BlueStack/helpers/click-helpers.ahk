@@ -22,6 +22,8 @@ ClickToEny(imageNames, params := false) {
     sleepBefore := params.sleepBefore ? params.sleepBefore : 200
     sleepAfter := params.sleepAfter ? params.sleepAfter : 200
     variation := params.variation ? params.variation : 0
+    variationStep := params.variation ? params.variation : 20
+    variationMax := params.variation ? params.variation : 55
     clickPosition := params.clickPosition ? params.clickPosition : [0.5, 0.5]
 
     if(IS_DEBUG_MODE) {
@@ -39,6 +41,7 @@ ClickToEny(imageNames, params := false) {
             ImageSearch, FoundX, FoundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%variation% %imagePath%
             If !ErrorLevel
             {
+
                 ; Поиск центра картинки
                 iSize:=getImageSize(imagePath)
                 CenterX := FoundX + iSize.width * clickPosition[1]
@@ -70,8 +73,8 @@ ClickToEny(imageNames, params := false) {
             Return false  ; Изображение не найдено в течение maxWaitTimeSec
         }
 
-        if(variation < 55) {
-            variation += 20
+        if(variation < variationMax) {
+            variation += variationStep
         }
     }
 }

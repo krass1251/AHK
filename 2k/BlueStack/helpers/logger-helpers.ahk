@@ -21,6 +21,13 @@ ErrorFindEny(funcName, imageNames, params := false) {
 ;    LogToTelegram(Message)
 }
 
+LogMessage(message, params := false) {
+    FormatTime, currentTime,, dd.MM.yyyy HH:mm:ss
+    Message := currentTime . "`n" . message
+    LogToFile(Message)
+;    LogToTelegram(Message)
+}
+
 OkFindEny(funcName, imageNames, params := false) {
     additionalText := params.additionalText ? params.additionalText : ""
 

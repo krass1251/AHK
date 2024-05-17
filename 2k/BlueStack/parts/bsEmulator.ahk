@@ -20,27 +20,53 @@ runEmulator(emulatorName) {
 
 closeEmulator() {
     ClickToEny(["Android_close"])
-    return ClickToEny(["Android_close-confirm"], { sleepAfter: 1500 })
+    return ClickToEny(["Android_close-confirm", "Android_close-confirm2"], { sleepAfter: 1500 })
 }
 
 androidResetApps() {
     ClickToEny(["Android_resentApp"])
-
-    if (!ClickToEny(["Android_clearAll", "Android_clearAll2", "Android_clearAll3", "Android_clearAll4"])) {
-        CoordMode, Mouse, Screen
-        MouseMove, 1550, 120
-        Sleep, 200
-        Click, Left, 1
-        Sleep, 200
-    }
+    ClickToEny(["Android_clearAll", "Android_clearAll2", "Android_clearAll3", "Android_clearAll4", "Android_clearAll5"], { maxWaitTimeSec: 30, variation: 20 })
+;    if (!ClickToEny(["Android_clearAll", "Android_clearAll2", "Android_clearAll3", "Android_clearAll4"])) {
+;        CoordMode, Mouse, Screen
+;        MouseMove, 1550, 120
+;        Sleep, 200
+;        Click, Left, 1
+;        Sleep, 200
+;    }
 }
 
 openTelegram(){
-    androidResetApps()
+;    androidResetApps()
     ClickToEny(["telegramLogo2", "telegramLogo", "telegramLogo3", "telegramLogo4"])
     if (ClickToEny(["telegram_contact-ok"], { maxWaitTimeSec: 5 })) {
         ClickToEny(["android-allow"], { maxWaitTimeSec: 5 })
         ClickToEny(["android-allow"], { maxWaitTimeSec: 5 })
     }
-    ClickToEny(["telegram-update-latter"], { maxWaitTimeSec: 5 })
+    ClickToEny(["telegram-update-latter", "telegram-update-latter2"], { maxWaitTimeSec: 5 })
+}
+
+closeTelegram() {
+    if (ClickToEny(["Android_backBtn"])) {
+       Sleep, 200
+       Click, Left, 1
+       Sleep, 200
+       Click, Left, 1
+       Sleep, 200
+       Click, Left, 1
+       Sleep, 200
+       Click, Left, 1
+       Sleep, 200
+       Click, Left, 1
+       Sleep, 200
+       Click, Left, 1
+       Sleep, 200
+       Click, Left, 1
+       Sleep, 200
+       Click, Left, 1
+       Sleep, 200
+       Click, Left, 1
+       Sleep, 200
+       Click, Left, 1
+       Sleep, 200
+    }
 }

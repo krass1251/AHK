@@ -356,3 +356,21 @@ variation150
 ERROR in func: ClickToEny
 can't find images: imageNames     
 variation: 150
+
+17.05.2024 10:22:22
+START in func: ClickToEny
+looking for images: Android_clearAll Android_clearAll2 Android_clearAll3 Android_clearAll4 Android_clearAll5 
+
+17.05.2024 10:22:23
+start serach: Android_clearAll
+
+17.05.2024 10:22:26
+stop serach: Android_clearAll
+
+17.05.2024 10:22:26
+found image: Android_clearAll
+
+17.05.2024 10:22:27
+Ok in func: ClickToEny
+find images: Android_clearAll Android_clearAll2 Android_clearAll3 Android_clearAll4 Android_clearAll5 
+variation: 20
