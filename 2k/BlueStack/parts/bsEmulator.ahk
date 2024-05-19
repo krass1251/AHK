@@ -43,6 +43,7 @@ openTelegram(){
         ClickToEny(["android-allow"], { maxWaitTimeSec: 5 })
     }
     ClickToEny(["telegram-update-latter", "telegram-update-latter2"], { maxWaitTimeSec: 5 })
+    ClickToEny(["telegram-update-latter", "telegram-update-latter2"], { maxWaitTimeSec: 5 })
 }
 
 closeTelegram() {
