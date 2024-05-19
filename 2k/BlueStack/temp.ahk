@@ -14,4 +14,6 @@
 
 #Include projects\hamster.ahk
 
-ClickToEny(["Android_clearAll6", "Android_clearAll", "Android_clearAll2", "Android_clearAll3", "Android_clearAll4", "Android_clearAll5"], { maxWaitTimeSec: 30, variation: 50 })
+
+
+    ClickToEny(["BS_startEmulator"])
