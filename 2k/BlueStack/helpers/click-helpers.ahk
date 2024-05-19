@@ -1,6 +1,6 @@
 /*
 ClickToEny() Parameters:
-- imageNames (Array of Strings): Names of the images to search for. ["telegramLogo", "telegramLogo2"]
+- imageNames (Array of Strings): Names of the images to search for. ["imgName1", "imgName2"]
 - params (Object, Optional): Customization options:
     - maxWaitTimeSec (Integer): Max wait time in seconds (default: 10, { maxWaitTimeSec: 120 }).
     - sleepBefore (Integer): Sleep before find image (default: 200, { sleepBefore: 200 } ).

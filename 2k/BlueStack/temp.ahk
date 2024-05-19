@@ -16,4 +16,4 @@
 
 
 
-    ClickToEny(["BS_startEmulator"])
+ClickToEny(["proxy_active1", "proxy_active2"])
