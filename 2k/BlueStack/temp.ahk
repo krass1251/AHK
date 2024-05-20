@@ -14,6 +14,5 @@
 
 #Include projects\hamster.ahk
 
-
-
-ClickToEny(["proxy_active1", "proxy_active2"])
+Sleep 2000
+Send, {LWin}
