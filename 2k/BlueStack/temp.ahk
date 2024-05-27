@@ -1,5 +1,6 @@
 #Include ..\..\Libs\Lib\getImageSize.ahk
-#Include ..\..\Libs\json\JSON.ahk
+#Include ..\..\Libs\Lib\imageSearchc.ahk
+;#Include ..\..\Libs\json\JSON.ahk
 
 #Include helpers\clipboard-helper.ahk
 #Include helpers\click-helpers.ahk
@@ -14,4 +15,6 @@
 ;
 ;#Include projects\hamster.ahk
 
-MsgBox Height: %A_ScreenHeight% Width: %A_ScreenWidth%
+;#Include code.ahk
+
+ClickToEny(["test\test_ahk"], { clickPosition: [1, 0] })

@@ -5,7 +5,7 @@ ClickToEny() Parameters:
     - maxWaitTimeSec (Integer): Max wait time in seconds (default: 10, { maxWaitTimeSec: 120 }).
     - sleepBefore (Integer): Sleep before find image (default: 200, { sleepBefore: 200 } ).
     - sleepAfter (Integer): Sleep after find image (default: 200, { sleepAfter: 200 } ).
-    - clickPosition (Array of Two Integers): Click position within the image as fractions (default: { clickPosition: [0.5, 0.5] } ):
+    - clickPosition (Array of Two Integers): Click position within the image as fractions (default: [0.5, 0.5], { clickPosition: [0.5, 0.5] } ):
         - Left Top: [0, 0]
         - Right Top: [1, 0]
         - Left Bottom: [0, 1]
@@ -25,6 +25,8 @@ ClickToEny(imageNames, params := false) {
     variationStep := params.variation ? params.variation : 20
     variationMax := params.variation ? params.variation : 55
     clickPosition := params.clickPosition ? params.clickPosition : [0.5, 0.5]
+    trans := params.trans ? params.trans : ""
+    direction := params.direction ? params.direction : 5
 
     if(IS_DEBUG_MODE) {
         StartFindEny("ClickToEny", imageNames)
@@ -38,16 +40,18 @@ ClickToEny(imageNames, params := false) {
         {
             ; Поиск и клик картинки
             imagePath:= "images\" . imageName . ".png"
-            ImageSearch, FoundX, FoundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%variation% %imagePath%
-            If !ErrorLevel
+            sErrLev := imageSearchc(FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, imagePath, variation, trans, direction, IS_DEBUG_MODE)
+
+;            ImageSearch, FoundX, FoundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%variation% %imagePath%
+            If (sErrLev)
             {
 
                 ; Поиск центра картинки
                 iSize:=getImageSize(imagePath)
-                CenterX := FoundX + iSize.width * clickPosition[1]
-                CenterY := FoundY + iSize.height * clickPosition[2]
+                TargetX := FoundX + iSize.width * clickPosition[1]
+                TargetY := FoundY - iSize.height + iSize.height * clickPosition[2]
 
-                Click, %CenterX%, %CenterY%, 0
+                Click, %TargetX%, %TargetY%, 0
                 Sleep, 200
                 Click, Left, 1
                 Sleep, 200
