@@ -52,7 +52,9 @@ ClickToEny(imageNames, params := false) {
                 TargetY := FoundY + iSize.height * clickPosition[2]
 
                 CoordMode, Mouse, Screen
-                LogToFile(TargetX . ", " . TargetY)
+                LogToFile("FoundX, Y" . FoundX . ", " . FoundX)
+                LogToFile("TargetX, Y" . TargetX . ", " . TargetY)
+                LogToFile("imagePath" . imagePath . ", " . imagePath)
                 Click, %TargetX%, %TargetY%, 0
                 Sleep, 200
 ;                Click, Left, 1
