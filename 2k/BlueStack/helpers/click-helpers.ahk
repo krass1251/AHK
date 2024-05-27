@@ -39,8 +39,8 @@ ClickToEny(imageNames, params := false) {
         for index, imageName in imageNames
         {
             imagePath:= "images\" . imageName . ".png"
-;            sErrLev := imageSearchc(FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, imagePath, variation, trans, direction, IS_SCREEN_DEBUG_MODE)
-            sErrLev := imageSearchc2(FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, imagePath, {vari: variation, trans: trans, direction: direction, debug: IS_SCREEN_DEBUG_MODE})
+            sErrLev := imageSearchc(FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, imagePath, variation, trans, direction, IS_SCREEN_DEBUG_MODE)
+;            sErrLev := imageSearchc2(FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, imagePath, {vari: variation, trans: trans, direction: direction, debug: IS_SCREEN_DEBUG_MODE})
             If (sErrLev == 1)
             {
                 LogToFile("in if sErrLev" . sErrLev . " FoundX: " . FoundX . " FoundY: " . FoundY)
@@ -52,7 +52,7 @@ ClickToEny(imageNames, params := false) {
                 CoordMode, Mouse, Screen
                 Click, %TargetX%, %TargetY%, 0
                 Sleep, 200
-;                Click, Left, 1
+                Click, Left, 1
                 Sleep, 200
                 foundImage := true  ; Устанавливаем флаг, что изображение было найдено
                 Break  ; Прерываем цикл, если изображение найдено

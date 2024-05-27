@@ -20,9 +20,15 @@
 
 ;ClickToEny(["test\test_ahk"], { clickPosition: [0, 0]})
 ;Sleep, 2000
-ClickToEny(["test\h_test1"])
-ClickToEny(["test\h_test2"])
-ClickToEny(["test\h_test2"])
+
+Loop  ; Начало бесконечного цикла
+    {
+        ClickToEny(["test\h_test0"])
+        ClickToEny(["test\h_test1"])
+        ClickToEny(["test\h_test2"])
+        ClickToEny(["test\h_test2"])
+    }
+
 
 
 ;; Инициализация GDI+
