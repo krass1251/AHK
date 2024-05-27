@@ -19,6 +19,6 @@
 
 ;ClickToEny(["test\test_ahk"], { clickPosition: [0, 0]})
 Sleep, 2000
-;ClickToEny(["bs_Search1", "bs_Search2"], { clickPosition: [-2, 0.5]})
+ClickToEny(["bs_Search1", "bs_Search2"], { clickPosition: [0.5, 0.5]})
 CoordMode, Mouse, Screen
 Click, 512, 384, 0

@@ -54,7 +54,7 @@ ClickToEny(imageNames, params := false) {
                 CoordMode, Mouse, Screen
                 Click, %TargetX%, %TargetY%, 0
                 Sleep, 200
-                Click, Left, 1
+;                Click, Left, 1
                 Sleep, 200
                 foundImage := true  ; Устанавливаем флаг, что изображение было найдено
                 Break  ; Прерываем цикл, если изображение найдено
