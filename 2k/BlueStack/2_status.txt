@@ -1,5 +1,5 @@
 
-27.05.2024 19:45:36
+27.05.2024 21:11:27
 Ok in func: ClickToEny
 find images: test\test_ahk     
-variation: 40
+variation: 0

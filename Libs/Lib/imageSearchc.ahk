@@ -73,3 +73,74 @@ imageSearchc(byRef out1,byRef out2,x1,y1,x2,y2,image,vari:=0,trans:="",direction
 	}
 	return 0
 }
+
+imageSearchc2(byRef out1, byRef out2, x1, y1, x2, y2, image, params := false) {
+    scaleFactor := params.scaleFactor ? params.scaleFactor : 1.0
+    vari := params.vari ? params.vari : 0
+    trans := params.trans ? params.trans : ""
+    direction := params.direction ? params.direction : 5
+    debug := params.debug ? params.debug : 0
+
+    static ptok := gdip_startup()
+
+    ; Масштабируем изображение
+    imageB := ScaleImage(image, scaleFactor)
+    gdip_saveBitmapToFile(imageB,a_now ".png")
+    if !imageB {
+        MsgBox, Не удалось масштабировать изображение.
+        return -1
+    }
+
+    ; Создаем скриншот области экрана
+    scrn := gdip_bitmapfromscreen(x1 "|" y1 "|" x2 - x1 "|" y2 - y1)
+    if (debug)
+        gdip_saveBitmapToFile(scrn, a_now ".png")
+
+    ; Выполняем поиск изображения
+    errorlev := Gdip_ImageSearch(scrn, imageB, tempxy, 0, 0, 0, 0, vari, trans, direction)
+    gdip_disposeImage(scrn)
+    gdip_disposeImage(imageB)
+
+    if (errorlev) {
+        out := strSplit(tempxy, "`,")
+        out1 := out[1] + x1
+        out2 := out[2] + y1
+        return errorlev
+    }
+    return 0
+}
+
+; Функция масштабирования изображения
+ScaleImage(imagePath, scaleFactor) {
+    ; Загрузить изображение для поиска
+    pBitmap := Gdip_CreateBitmapFromFile(imagePath)
+    gdip_saveBitmapToFile(pBitmap,a_now "2.png")
+    if !pBitmap {
+        MsgBox, Не удалось загрузить изображение.
+        return
+    }
+
+    ; Получить размеры изображения
+    width := Gdip_GetImageWidth(pBitmap)
+    height := Gdip_GetImageHeight(pBitmap)
+
+    ; Масштабирование изображения
+    scaledWidth := width * scaleFactor / (1920/1024)
+    scaledHeight := height * scaleFactor / (1080/768)
+
+    ; Масштабировать изображение
+    pScaledBitmap := Gdip_CreateBitmap(scaledWidth, scaledHeight)
+    gdip_saveBitmapToFile(pScaledBitmap,"3.png")
+    G := Gdip_GraphicsFromImage(pScaledBitmap)
+    gdip_saveBitmapToFile(G,"4.png")
+    Gdip_SetInterpolationMode(G, 7) ; Высококачественное масштабирование
+    Gdip_DrawImage(G, pBitmap, 0, 0, scaledWidth, scaledHeight, width, height)
+
+    gdip_saveBitmapToFile(pBitmap,"pBitmap.png")
+    Gdip_DeleteGraphics(G)
+    Gdip_DisposeImage(pBitmap)
+
+    ; Возвращаем масштабированное изображение
+    return pScaledBitmap
+}
+
