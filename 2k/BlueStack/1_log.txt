@@ -1,4 +1,51 @@
 
-27.05.2024 18:27:04
+27.05.2024 19:44:27
 START in func: ClickToEny
-looking for images: hamster\hamster_thx hamster\hamster_thx2    
+looking for images: test\test_ahk     
+
+in if sErrLev1
+
+FoundX, Y1264, 1264
+
+TargetX, Y1264, 598
+
+imagePathimages\test\test_ahk.png
+
+27.05.2024 19:44:31
+Ok in func: ClickToEny
+find images: test\test_ahk     
+variation: 40
+
+27.05.2024 19:44:58
+START in func: ClickToEny
+looking for images: test\test_ahk     
+
+in if sErrLev1
+
+FoundX, Y1264, 1264
+
+TargetX, Y1264, 598
+
+imagePathimages\test\test_ahk.png
+
+27.05.2024 19:45:02
+Ok in func: ClickToEny
+find images: test\test_ahk     
+variation: 40
+
+27.05.2024 19:45:31
+START in func: ClickToEny
+looking for images: test\test_ahk     
+
+in if sErrLev1
+
+FoundX, Y1264, 1264
+
+TargetX, Y1264, 598
+
+imagePathimages\test\test_ahk.png
+
+27.05.2024 19:45:36
+Ok in func: ClickToEny
+find images: test\test_ahk     
+variation: 40

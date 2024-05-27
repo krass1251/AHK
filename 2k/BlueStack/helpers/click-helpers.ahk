@@ -38,23 +38,17 @@ ClickToEny(imageNames, params := false) {
         foundImage := false
         for index, imageName in imageNames
         {
-            ; Поиск и клик картинки
             imagePath:= "images\" . imageName . ".png"
             sErrLev := imageSearchc(FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, imagePath, variation, trans, direction, IS_SCREEN_DEBUG_MODE)
-
-;            ImageSearch, FoundX, FoundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%variation% %imagePath%
-            If (sErrLev)
+            If (sErrLev == 1)
             {
-
+                LogToFile("in if sErrLev" . sErrLev)
                 ; Поиск центра картинки
                 iSize:=getImageSize(imagePath)
                 TargetX := FoundX + iSize.width * clickPosition[1]
                 TargetY := FoundY + iSize.height * clickPosition[2]
 
                 CoordMode, Mouse, Screen
-                LogToFile("FoundX, Y" . FoundX . ", " . FoundX)
-                LogToFile("TargetX, Y" . TargetX . ", " . TargetY)
-                LogToFile("imagePath" . imagePath . ", " . imagePath)
                 Click, %TargetX%, %TargetY%, 0
                 Sleep, 200
 ;                Click, Left, 1
