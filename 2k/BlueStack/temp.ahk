@@ -5,9 +5,9 @@
 #Include helpers\clipboard-helper.ahk
 #Include helpers\click-helpers.ahk
 #Include helpers\logger-helpers.ahk
-;#Include helpers\files-helpers.ahk
+#Include helpers\files-helpers.ahk
 
-;#Include variables\variables.ahk
+#Include variables\variables.ahk
 ;
 ;#Include parts\bsEmulator.ahk
 ;#Include parts\proxy.ahk
@@ -17,4 +17,5 @@
 
 ;#Include code.ahk
 
-ClickToEny(["test\test_ahk"], { clickPosition: [1, 0] })
+;ClickToEny(["test\test_ahk"], { clickPosition: [0, 0]})
+ClickToEny(["bs_Search1", "bs_Search2"], { clickPosition: [-2, 0.5]})

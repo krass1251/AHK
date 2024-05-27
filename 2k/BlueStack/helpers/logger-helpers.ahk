@@ -12,7 +12,7 @@ StartFindEny(funcName, imageNames) {
 ;    LogToTelegram(Message)
 }
 
-ErrorFindEny(funcName, imageNames, params := false) {
+LogError(funcName, imageNames, params := false) {
     additionalText := params.additionalText ? params.additionalText : ""
 
     FormatTime, currentTime,, dd.MM.yyyy HH:mm:ss
@@ -28,7 +28,7 @@ LogMessage(message, params := false) {
 ;    LogToTelegram(Message)
 }
 
-OkFindEny(funcName, imageNames, params := false) {
+LogOk(funcName, imageNames, params := false) {
     additionalText := params.additionalText ? params.additionalText : ""
 
     FormatTime, currentTime,, dd.MM.yyyy HH:mm:ss

@@ -1,5 +1,4 @@
 
-17.05.2024 10:22:27
-Ok in func: ClickToEny
-find images: Android_clearAll Android_clearAll2 Android_clearAll3 Android_clearAll4 Android_clearAll5 
-variation: 20
+27.05.2024 18:27:04
+START in func: ClickToEny
+looking for images: hamster\hamster_thx hamster\hamster_thx2    

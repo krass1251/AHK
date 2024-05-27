@@ -40,7 +40,7 @@ ClickToEny(imageNames, params := false) {
         {
             ; Поиск и клик картинки
             imagePath:= "images\" . imageName . ".png"
-            sErrLev := imageSearchc(FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, imagePath, variation, trans, direction, IS_DEBUG_MODE)
+            sErrLev := imageSearchc(FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, imagePath, variation, trans, direction, IS_SCREEN_DEBUG_MODE)
 
 ;            ImageSearch, FoundX, FoundY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, *%variation% %imagePath%
             If (sErrLev)
@@ -49,8 +49,9 @@ ClickToEny(imageNames, params := false) {
                 ; Поиск центра картинки
                 iSize:=getImageSize(imagePath)
                 TargetX := FoundX + iSize.width * clickPosition[1]
-                TargetY := FoundY - iSize.height + iSize.height * clickPosition[2]
+                TargetY := FoundY + iSize.height * clickPosition[2]
 
+                CoordMode, Mouse, Screen
                 Click, %TargetX%, %TargetY%, 0
                 Sleep, 200
                 Click, Left, 1
@@ -63,7 +64,7 @@ ClickToEny(imageNames, params := false) {
         ; Проверяем, было ли найдено хотя бы одно изображение
         If (foundImage)
         {
-            OkFindEny("ClickToEny", imageNames, { additionalText: "variation: " . variation })
+            LogOk("ClickToEny", imageNames, { additionalText: "variation: " . variation })
             Sleep, %sleepAfter%
             Return true  ; Изображение найдено и кликнуто успешно
         }
@@ -73,7 +74,7 @@ ClickToEny(imageNames, params := false) {
 
         If ((currentTime - startTime) > (maxWaitTimeSec * 1000))
         {
-            ErrorFindEny("ClickToEny", imageNames, { additionalText: "variation: " . variation })
+            LogError("ClickToEny", imageNames, { additionalText: "variation: " . variation })
             Return false  ; Изображение не найдено в течение maxWaitTimeSec
         }
 
@@ -111,7 +112,7 @@ WaithForEny(imageNames, params := false) {
          ; Проверяем, было ли найдено хотя бы одно изображение
          If (foundImage)
          {
-            OkFindEny("WaithForEny", imageNames)
+            LogOk("WaithForEny", imageNames)
             Return true  ; Прерываем внешний цикл, если хотя бы одно изображение было найдено
          }
 
@@ -120,7 +121,7 @@ WaithForEny(imageNames, params := false) {
 
         If ((currentTime - startTime) > (maxWaitTimeSec * 1000))
         {
-            ErrorFindEny("WaithForEny", imageNames)
+            LogError("WaithForEny", imageNames)
             Return false  ; Изображение не найдено в течение maxWaitTimeSec
         }
      }
