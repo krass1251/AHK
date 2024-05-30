@@ -27,6 +27,7 @@ ClickToEny(imageNames, params := false) {
     clickPosition := params.clickPosition ? params.clickPosition : [0.5, 0.5]
     trans := params.trans ? params.trans : ""
     direction := params.direction ? params.direction : 5
+    isCritical := params.isCritical ? params.isCritical : 1
 
     if(IS_DEBUG_MODE) {
         StartFindEny("ClickToEny", imageNames)
@@ -40,7 +41,6 @@ ClickToEny(imageNames, params := false) {
         {
             imagePath:= "images\" . imageName . ".png"
             sErrLev := imageSearchc(FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, imagePath, variation, trans, direction, IS_SCREEN_DEBUG_MODE)
-;            sErrLev := imageSearchc2(FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, imagePath, {vari: variation, trans: trans, direction: direction, debug: IS_SCREEN_DEBUG_MODE})
             If (sErrLev == 1)
             {
                 LogToFile("in if sErrLev" . sErrLev . " FoundX: " . FoundX . " FoundY: " . FoundY)
@@ -73,6 +73,7 @@ ClickToEny(imageNames, params := false) {
         If ((currentTime - startTime) > (maxWaitTimeSec * 1000))
         {
             LogError("ClickToEny", imageNames, { additionalText: "variation: " . variation })
+            ; todo make screenshot
             Return false  ; Изображение не найдено в течение maxWaitTimeSec
         }
 

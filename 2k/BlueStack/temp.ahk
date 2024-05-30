@@ -19,15 +19,9 @@
 ;#Include code.ahk
 
 ;ClickToEny(["test\test_ahk"], { clickPosition: [0, 0]})
-;Sleep, 2000
-
-Loop  ; Начало бесконечного цикла
-    {
-        ClickToEny(["test\h_test0"])
-        ClickToEny(["test\h_test1"])
-        ClickToEny(["test\h_test2"])
-        ClickToEny(["test\h_test2"])
-    }
+Sleep, 10000
+scrn:=gdip_bitmapfromscreen(0 "|" 0 "|" A_ScreenWidth - 0 "|" A_ScreenHeight - 0)
+gdip_saveBitmapToFile(scrn,a_now ".png")
 
 
 
