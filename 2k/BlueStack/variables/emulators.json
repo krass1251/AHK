@@ -1,11 +1,111 @@
 [
   {
     "name": "0 krass1251.tg",
+    "isSkipMe": false,
     "projects": [
       {
-        "name": "memeFi",
-        "repeatsInMin": 5,
-        "repeatsRandomMin": 2
+        "name": "hamster",
+        "repeatsInMin": 180
+      }
+    ]
+  },
+  {
+    "name": "1 master5838.tg",
+    "isSkipMe": false,
+    "projects": [
+      {
+        "name": "hamster",
+        "repeatsInMin": 180
+      }
+    ]
+  },
+  {
+    "name": "2 gabriela925.tg",
+    "isSkipMe": true,
+    "projects": [
+      {
+        "name": "hamster",
+        "repeatsInMin": 180
+      }
+    ]
+  },
+  {
+    "name": "3 howard725.tg",
+    "isSkipMe": false,
+    "projects": [
+      {
+        "name": "hamster",
+        "repeatsInMin": 180
+      }
+    ]
+  },
+  {
+    "name": "4 griffin261.tg",
+    "isSkipMe": false,
+    "projects": [
+      {
+        "name": "hamster",
+        "repeatsInMin": 180
+      }
+    ]
+  },
+  {
+    "name": "5 cameron732.tg",
+    "isSkipMe": false,
+    "projects": [
+      {
+        "name": "hamster",
+        "repeatsInMin": 180
+      }
+    ]
+  },
+  {
+    "name": "6 hampton782.tg",
+    "isSkipMe": false,
+    "projects": [
+      {
+        "name": "hamster",
+        "repeatsInMin": 180
+      }
+    ]
+  },
+  {
+    "name": "7 lucas4587.tg",
+    "isSkipMe": false,
+    "projects": [
+      {
+        "name": "hamster",
+        "repeatsInMin": 180
+      }
+    ]
+  },
+  {
+    "name": "8 hutchinson65487.tg",
+    "isSkipMe": false,
+    "projects": [
+      {
+        "name": "hamster",
+        "repeatsInMin": 180
+      }
+    ]
+  },
+  {
+    "name": "9 wilcox98745.tg",
+    "isSkipMe": false,
+    "projects": [
+      {
+        "name": "hamster",
+        "repeatsInMin": 180
+      }
+    ]
+  },
+  {
+    "name": "10 manning2589.tg",
+    "isSkipMe": false,
+    "projects": [
+      {
+        "name": "hamster",
+        "repeatsInMin": 180
       }
     ]
   }

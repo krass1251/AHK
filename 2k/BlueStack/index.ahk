@@ -12,6 +12,7 @@
 #Include parts\bsEmulator.ahk
 #Include parts\proxy.ahk
 #Include parts\clickAsist.ahk
+#Include parts\makeProjects.ahk
 
 #Include projects\hamster.ahk
 

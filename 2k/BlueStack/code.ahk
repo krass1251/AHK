@@ -1,12 +1,17 @@
 Loop  ; Начало бесконечного цикла
 {
-    ; Перебираем все элементы массива emulatorNames
-    Loop, % emulatorNames.MaxIndex()
+    ; Перебираем все элементы массива emulators
+    Loop, % emulators.MaxIndex()
     {
-        LogStart("start emulator: " . emulatorNames[A_Index])
-        emulatorName := emulatorNames[A_Index]
+        emulator := emulators[A_Index]
 
-        if (!runEmulator(emulatorName)) {
+        LogStart("start emulator: " . emulator.name)
+
+        if (emulator.isSkipMe) {
+            continue
+        }
+
+        if (!runEmulator(emulator.name)) {
             continue
         }
 
@@ -14,9 +19,11 @@ Loop  ; Начало бесконечного цикла
             continue
         }
 
-;            ClickAsist()
-        hamster()
+;        ClickAsist()
 
+        makeProjects(emulator.projects)
+
+        ; todo send the report to telegram
         closeEmulator()
     }
     Sleep, 60 * 60000
